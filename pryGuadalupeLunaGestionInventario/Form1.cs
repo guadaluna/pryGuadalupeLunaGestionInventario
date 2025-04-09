@@ -16,15 +16,13 @@ namespace pryGuadalupeLunaGestionInventario
         {
             InitializeComponent();
         }
+        clsConexionBD bd = new clsConexionBD();
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void frmGestion_Load(object sender, EventArgs e)
         {
-
+            //mostrar
+            bd.listarInventario(dgvInventario);
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

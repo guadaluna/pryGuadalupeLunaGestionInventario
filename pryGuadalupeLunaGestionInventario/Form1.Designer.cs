@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblStock = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.numStock = new System.Windows.Forms.NumericUpDown();
+            this.numPrecio = new System.Windows.Forms.NumericUpDown();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.numPrecio = new System.Windows.Forms.NumericUpDown();
-            this.numStock = new System.Windows.Forms.NumericUpDown();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblStock = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.grpModificar = new System.Windows.Forms.GroupBox();
             this.lblStockMod = new System.Windows.Forms.Label();
             this.lblPrecioMod = new System.Windows.Forms.Label();
@@ -72,8 +72,8 @@
             this.txtNomEliminar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             this.grpModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMod)).BeginInit();
@@ -98,24 +98,6 @@
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.Size = new System.Drawing.Size(543, 503);
             this.dgvInventario.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblStock);
-            this.groupBox1.Controls.Add(this.lblPrecio);
-            this.groupBox1.Controls.Add(this.numStock);
-            this.groupBox1.Controls.Add(this.numPrecio);
-            this.groupBox1.Controls.Add(this.lblDescripcion);
-            this.groupBox1.Controls.Add(this.txtDescripcion);
-            this.groupBox1.Controls.Add(this.lblNombre);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Location = new System.Drawing.Point(26, 24);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(153, 237);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Agregar";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // codigo
             // 
@@ -142,22 +124,54 @@
             this.stock.HeaderText = "Stock";
             this.stock.Name = "stock";
             // 
-            // txtNombre
+            // groupBox1
             // 
-            this.txtNombre.Location = new System.Drawing.Point(22, 51);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 0;
-            this.txtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.groupBox1.Controls.Add(this.lblStock);
+            this.groupBox1.Controls.Add(this.lblPrecio);
+            this.groupBox1.Controls.Add(this.numStock);
+            this.groupBox1.Controls.Add(this.numPrecio);
+            this.groupBox1.Controls.Add(this.lblDescripcion);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
+            this.groupBox1.Controls.Add(this.lblNombre);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Location = new System.Drawing.Point(26, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(153, 237);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Agregar";
             // 
-            // lblNombre
+            // lblStock
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(19, 35);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre";
+            this.lblStock.AutoSize = true;
+            this.lblStock.Location = new System.Drawing.Point(19, 166);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(35, 13);
+            this.lblStock.TabIndex = 7;
+            this.lblStock.Text = "Stock";
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(19, 122);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecio.TabIndex = 6;
+            this.lblPrecio.Text = "Precio";
+            // 
+            // numStock
+            // 
+            this.numStock.Location = new System.Drawing.Point(22, 182);
+            this.numStock.Name = "numStock";
+            this.numStock.Size = new System.Drawing.Size(100, 20);
+            this.numStock.TabIndex = 5;
+            // 
+            // numPrecio
+            // 
+            this.numPrecio.Location = new System.Drawing.Point(22, 138);
+            this.numPrecio.Name = "numPrecio";
+            this.numPrecio.Size = new System.Drawing.Size(100, 20);
+            this.numPrecio.TabIndex = 4;
             // 
             // lblDescripcion
             // 
@@ -175,37 +189,21 @@
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
             this.txtDescripcion.TabIndex = 2;
             // 
-            // numPrecio
+            // lblNombre
             // 
-            this.numPrecio.Location = new System.Drawing.Point(22, 138);
-            this.numPrecio.Name = "numPrecio";
-            this.numPrecio.Size = new System.Drawing.Size(100, 20);
-            this.numPrecio.TabIndex = 4;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(19, 35);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Nombre";
             // 
-            // numStock
+            // txtNombre
             // 
-            this.numStock.Location = new System.Drawing.Point(22, 182);
-            this.numStock.Name = "numStock";
-            this.numStock.Size = new System.Drawing.Size(100, 20);
-            this.numStock.TabIndex = 5;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(19, 122);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
-            this.lblPrecio.TabIndex = 6;
-            this.lblPrecio.Text = "Precio";
-            // 
-            // lblStock
-            // 
-            this.lblStock.AutoSize = true;
-            this.lblStock.Location = new System.Drawing.Point(19, 166);
-            this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(35, 13);
-            this.lblStock.TabIndex = 7;
-            this.lblStock.Text = "Stock";
+            this.txtNombre.Location = new System.Drawing.Point(22, 51);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 0;
             // 
             // grpModificar
             // 
@@ -462,11 +460,12 @@
             this.Controls.Add(this.dgvInventario);
             this.Name = "frmGestion";
             this.Text = "Gestion de inventario";
+            this.Load += new System.EventHandler(this.frmGestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             this.grpModificar.ResumeLayout(false);
             this.grpModificar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMod)).EndInit();
